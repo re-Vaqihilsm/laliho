@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    <div class="noise"></div>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration top-right"></div>
+        <div class="corner-decoration bottom-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title glitch">AHMAD RIFAQQI AL FARUQI</h1>
+            <p class="hero-subtitle">Orang paling cihuyy yang pernah kau dengar</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="profile-img">
+                <img src="mypoto.jpg" alt="Profile">
+            </div>
+            <div class="about-text">
+                <p>I am someone who has an interest in technology.</p>
+                <p>I am a student who is interested in several fields of technology from programming, design, editing, etc.</p>
+                <p>When I have free time, I use it to play games or do sports like cycling or watching movies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="mata.jpg" alt="Project 1">
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Projek 1</h3>
+                    <p class="project-desc">deskripsi projek 1</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">HTML</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="kurisu.jpg" alt="Project 2">
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Projek 2</h3>
+                    <p class="project-desc">deskripsi projek 2</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">php</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="download.jpg" alt="Project 3">
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Projek 3</h3>
+                    <p class="project-desc">deskripsi projek 3</p>
+                    <div class="project-tags">
+                        <span class="tag">JAVA</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Programming</span>
+                    <span>20%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-width="20"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Academics</span>
+                    <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-width="85"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Gaming</span>
+                    <span>75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-width="75"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Story</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-width="90"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-container">
+        <form class="contact-form" id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button type="button" class="cta-button" id="gamble-send">Send Message</button>
+        </form>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3>Email</h3>
+                    <p>superakunman@gmail.com</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <h3>Phone</h3>
+                    <p>+62-8953-8527-0133</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h3>Location</h3>
+                    <p>Jaksel, Indo</p>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Slot Machine Modal -->
+<div class="slot-machine-modal" id="slot-machine">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>MESSAGE GAMBLING MACHINE</h3>
+            <p>HIT JACKPOT UNTUK MENGIRIM PESAN!</p>
+        </div>
+        
+        <div class="slot-machine">
+            <div class="slot-reels">
+                <div class="reel" id="reel1">
+                    <div class="symbol">💔</div>
+                    <div class="symbol">🥀</div>
+                    <div class="symbol">🔥</div>
+                    <div class="symbol">🗣</div>
+                    <div class="symbol">👍</div>
+                    <div class="symbol">👅</div>
+                    <div class="symbol">7️⃣</div>
+                </div>
+                <div class="reel" id="reel2">
+                    <div class="symbol">💔</div>
+                    <div class="symbol">🥀</div>
+                    <div class="symbol">🔥</div>
+                    <div class="symbol">🗣</div>
+                    <div class="symbol">👍</div>
+                    <div class="symbol">👅</div>
+                    <div class="symbol">7️⃣</div>
+                </div>
+                <div class="reel" id="reel3">
+                    <div class="symbol">💔</div>
+                    <div class="symbol">🥀</div>
+                    <div class="symbol">🔥</div>
+                    <div class="symbol">🗣</div>
+                    <div class="symbol">👍</div>
+                    <div class="symbol">👅</div>
+                    <div class="symbol">7️⃣</div>
+                </div>
+            </div>
+            
+            <div class="slot-controls">
+                <button class="slot-button" id="spin-button">SPIN</button>
+                <div class="slot-result" id="slot-result"></div>
+            </div>
+        </div>
+        
+        <div class="modal-footer">
+            <button class="cta-button" id="close-modal">CANCEL</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Footer terkeren yang paling keren</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
