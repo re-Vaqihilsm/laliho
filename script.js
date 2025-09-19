@@ -210,4 +210,59 @@ buttons.forEach(button => {
     const sound = new Audio('hover-sound.wav');
     sound.play();
   });
+
+});
+
+// Cek apakah pengguna sudah login
+function checkLoginStatus() {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    
+    // Jika di halaman login dan sudah login, redirect ke index
+    if (window.location.pathname.includes('login.html') && isLoggedIn === 'true') {
+        window.location.href = 'index.html';
+    }
+    
+    // Jika di halaman index dan belum login, redirect ke login
+    if (window.location.pathname.includes('index.html') && isLoggedIn !== 'true') {
+        window.location.href = 'login.html';
+    }
+}
+
+// Handle login form
+document.addEventListener('DOMContentLoaded', function() {
+    checkLoginStatus();
+    
+    const loginForm = document.getElementById('loginForm');
+    const errorMessage = document.getElementById('errorMessage');
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Simulasi validasi login (ganti dengan logika yang sesuai)
+            if (username === 'admin' && password === 'password123') {
+                // Set status login di sessionStorage
+                sessionStorage.setItem('isLoggedIn', 'true');
+                sessionStorage.setItem('username', username);
+                
+                // Redirect ke halaman utama
+                window.location.href = 'index.html';
+            } else {
+                errorMessage.textContent = 'Username atau password salah!';
+            }
+        });
+    }
+    
+    // Handle logout
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function() {
+            sessionStorage.removeItem('isLoggedIn');
+            sessionStorage.removeItem('username');
+            window.location.href = 'login.html';
+        });
+    }
 });
